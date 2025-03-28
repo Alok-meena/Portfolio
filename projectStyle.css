@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(0,0,30);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-y: scroll; /* Ensure scrollbar is always visible */
+    padding-top: 80px; /* Make space for the fixed header */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0,0,33); /* Default header background color */
+    z-index: 1000; /* Make sure header is above other content */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Adjust to space items properly */
+    align-items: center;
+    height: 80px;
+    padding: 0 20px; /* Add padding to the sides */
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+}
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+    display: flex; /* Ensure items are aligned properly */
+    align-items: center; /* Align items vertically */
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex; /* Allow image and text to be aligned horizontally */
+    align-items: center;
+}
+nav ul li a img {
+    width: 20px; /* Adjust image size */
+    height: 20px; /* Adjust image size */
+    margin-right: 5px; /* Space between image and text */
+}
+nav ul li a:hover {
+    color: rgb(87, 87, 206);
+    font-size: 1.02rem;
+}
+.left {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between image and text */
+    margin-top: 10px; /* Add gap between circle and top of the page */
+    flex: 1; /* Allow the left section to take up available space */
+}
+.circle {
+    width: 70px; /* Adjust size of the circle */
+    height: 70px; /* Adjust size of the circle */
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Add a small gap from the top */
+    margin-left: 140px;
+    margin-bottom: 10px;
+}
+.right {
+    margin-right: 150px;
+}
+.circle img {
+    width: 120%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the circle */
+    border-radius: 50%; /* Ensure image is clipped to the circle shape */
+}
+.circle img:hover{
+    cursor: pointer;
+    background-color: red;
+    transform: scaleX(-1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.projects h1{
+    font-family:Raleway;
+    margin-top:100px;
+    margin-left:550px;
+    font-size: 40px;
+    font-weight:600;
+}
+.projects h3{
+    font-family:Raleway;
+    margin-top: 10px;
+    margin-left:560px;
+    font-size:17px;
+    font-weight:600;
+}
+
+/* Container for project boxes */
+.projects {
+    padding: 20px;
+}
+
+/* Container for the grid layout of project boxes */
+.projectsSection {
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    gap:30px; /* Adds space between the boxes */
+}
+
+/* Style for each project box */
+.box {
+    padding: 0 20px 0 20px;
+    height:500px; /* Adjust height as needed */
+    background-color:rgba(6, 6, 6, 0.3); /* Dark background color */
+    border: 2px solid pink; /* Pink border */
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    flex-direction: column; /* Stacks children vertically */
+    align-items: center;
+    justify-content: flex-start;
+    color: white; /* Text color inside the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for box */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+/* Hover effects for the boxes */
+.box:hover {
+    transform: scale(1.1); /* Slightly enlarge the box */
+    border-color: pink; /* Maintain pink border on hover */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4), 0 6px 12px rgba(0, 0, 0, 0.4); /* Add pink shadow effect */
+}
+
+#portfolio {
+    margin: 10px 20px 65px 20px;
+    border-radius: 20px;
+    overflow: hidden; /* Ensure content stays within the border radius */
+}
+#tictactoe {
+    margin: 10px 40px 20px 20px;
+    border-radius: 20px;
+    overflow: hidden; /* Ensure content stays within the border radius */
+}
+#fruit {
+    margin: 10px 20px 40px 20px;
+    border-radius: 20px;
+    overflow: hidden; /* Ensure content stays within the border radius */
+}
+#todolist {
+    margin: 10px 20px 20px 20px;
+    border-radius: 20px;
+    overflow: hidden; /* Ensure content stays within the border radius */
+}
+
+
+/* Style for the image container within each box */
+.image {
+    width: 100%;
+    height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+    display: block; /* Ensures the image is a block element and takes up full width */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+.projectSummary h1{
+    font-size: 25px;
+    margin-left: 110px;
+    margin-bottom: 10px;
+    font-family: raleway;
+}
+
+
+/* Style for the paragraph */
+.projectSummary p {
+    background-color:rgba(105, 30, 225, 0.1);
+    border-radius: 10px;
+    font-family:raleway;
+    font-size: 15px;
+    margin-bottom: 20px; /* Adds space below the paragraph */
+}
+
+/* Style for the link styled as a button */
+.link {
+    margin-left: 150px;
+    display: inline-flex; /* Ensure the link behaves like a button */
+    align-items: center; /* Aligns the image and text vertically */
+    background-color: blueviolet;
+    color: white; /* Ensure text is visible on the blueviolet background */
+    font-size: 20px;
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Add rounded corners to the button */
+    padding: 10px 20px; /* Add padding for better spacing */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    text-decoration: none; /* Remove underline from link */
+    gap: 10px; /* Space between the image and the text */
+    text-align: center; /* Center text in the button */
+}
+
+/* Style for the image inside the link */
+.link img {
+    width: 20px; /* Set a specific width for the image */
+    height: auto; /* Keep aspect ratio */
+    object-fit: cover; /* Ensure the image scales correctly */
+}
+
+
+/* Style for the image itself */
+.image img {
+    width: 100%;
+    height: auto; /* Ensures image scales correctly */
+    object-fit: cover; /* Ensures image covers the container without distortion */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom Scrollbar Styles for WebKit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Increased width for visibility */
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent thumb for visibility */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(0,0,33); /* Color of the scrollbar track */
+}
+
+/* Custom Scrollbar Styles for Firefox */
+scrollbar-width: thin; /* Width of the scrollbar */
+scrollbar-color: rgba(255, 255, 255, 0.5) rgb(0,0,33); /* Color of the scrollbar thumb and track */
+
+/*

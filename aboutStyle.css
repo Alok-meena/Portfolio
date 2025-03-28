@@ -1,0 +1,305 @@
+/* Global Styles */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(0,0,30);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    overflow-y: scroll; /* Ensure scrollbar is always visible */
+    padding-top: 80px; /* Make space for the fixed header */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(0,0,33); /* Default header background color */
+    z-index: 1000; /* Make sure header is above other content */
+    transition: background-color 0.3s; /* Smooth transition for background color change */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* Adjust to space items properly */
+    align-items: center;
+    height: 80px;
+    padding: 0 20px; /* Add padding to the sides */
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Align items vertically */
+}
+nav ul li {
+    list-style: none;
+    margin: 0 23px;
+    display: flex; /* Ensure items are aligned properly */
+    align-items: center; /* Align items vertically */
+}
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex; /* Allow image and text to be aligned horizontally */
+    align-items: center;
+}
+nav ul li a img {
+    width: 20px; /* Adjust image size */
+    height: 20px; /* Adjust image size */
+    margin-right: 5px; /* Space between image and text */
+}
+nav ul li a:hover {
+    color: rgb(87, 87, 206);
+    font-size: 1.02rem;
+}
+.left {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust spacing between image and text */
+    margin-top: 10px; /* Add gap between circle and top of the page */
+    flex: 1; /* Allow the left section to take up available space */
+}
+.circle {
+    width: 70px; /* Adjust size of the circle */
+    height: 70px; /* Adjust size of the circle */
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Add a small gap from the top */
+    margin-left: 140px;
+    margin-bottom: 10px;
+}
+.right {
+    margin-right: 150px;
+}
+.circle img {
+    width: 120%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the circle */
+    border-radius: 50%; /* Ensure image is clipped to the circle shape */
+}
+.circle img:hover{
+    cursor: pointer;
+    background-color: red;
+    transform: scaleX(-1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.firstSection{
+    display:flex;
+    justify-content: space-around;
+    margin:0;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.firstSection > div{
+    width:80%;
+}
+.leftSection{
+    margin-top:100px;
+}
+.rightSection{
+    margin-top:0px;
+}
+.leftSection h1{
+    font-family: Raleway;
+    font-size:40px;
+    margin-left:300px;
+    font-weight:300;
+}
+.rightSection img{
+    margin-left: 200px;
+}
+.intro{
+    margin-top:60px;
+}
+.intro p{
+    font-size:29px;
+    margin-left: 130px;
+    font-family:inherit;
+    padding: 4px;
+}
+.intro ul{
+    margin-left: 200px;
+    margin-top: 20px;
+    font-size: 29px;
+}
+.intro ul li{
+    padding: 10px;
+}
+.intro h4{
+    margin-left: 250px;
+    margin-top: 40px;
+    font-size:25px;
+    color:violet;
+}
+.intro .saidby{
+    margin-left:250px;
+}
+.no-bullets {
+    list-style-type: none; /* Removes the bullet points */
+    padding-left: 0;       /* Removes the indentation */
+}
+
+
+.skills {
+    margin: 0 auto; /* Center the entire skills section horizontally */
+    padding: 20px; /* Add padding around the section */
+    max-width: 1200px; /* Limit the width to keep it centered */
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center; /* Center the title */
+}
+
+.skills h1 {
+    margin-bottom: 50px;
+}
+
+.flex-container {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap:40px; /* Space between the boxes */
+    padding: 20px; /* Padding inside the container */
+}
+
+.box{
+    height:200px; /* Adjust the height as needed */
+    background-color: rgb(0, 0, 30); /* Dark background color for the box */
+    border: 2px solid pink; /* Pink border */
+    border-radius: 10px; /* Rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px; /* Adjust text size inside boxes */
+    color: white; /* Text color inside the box */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+}
+
+.box:hover {
+    transform: scale(1.1); /* Increases the size of the box */
+    border-color: pink; /* Keeps the border color pink on hover */
+    box-shadow: 0 8px 16px rgba(255, 105, 180, 0.4), 0 6px 12px rgba(0, 0, 0, 0.4); /* Adds a bright pink shadow effect */
+}
+
+.box{
+    display: grid;
+    gap:20px;
+}
+.image{
+    margin-top:30px;
+    margin-bottom: 0;
+}
+.skillname{
+    margin-top: 0;
+    font-size:10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.tools h1{
+    margin-top:50px;
+    margin-left:650px;
+    font-size:45px;
+    font-family:raleway;
+    margin-bottom: 50px;
+}
+
+.tools h1 {
+    margin-top: 200px;
+    font-size: 45px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 50px;
+}
+
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin: 0 200px 150px;
+}
+
+.box {
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.image img {
+    width: 100px;
+    height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.toolname {
+    margin-top: 10px;
+    font-size:20px;
+    color:blueviolet;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.box:hover .toolname {
+    opacity: 1;
+    z-index: 2;
+}
+
+/*
+
+Exactly! The name is already in place but initially hidden or less prominent. When you hover over the box:
+
+Opacity: Changes to 1, making the tool name fully visible.
+Z-Index: Increases to 2, ensuring the tool name appears in front of other content, so it’s not obscured.
+This approach makes sure that the name shows up clearly and is not hidden behind any other elements when you hover over the box.
+
+*/
+
+
+
+footer {
+    font-size: 7px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    width: 100%;
+    padding: 20px;
+    font-weight: 100;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.copy {
+    margin-left: 300px;
+}
+
+.link {
+    margin-left: 330px;
+}
+
+/* Custom Scrollbar Styles for WebKit Browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Increased width for visibility */
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent thumb for visibility */
+    border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+}
+::-webkit-scrollbar-track {
+    background-color: rgb(0,0,33); /* Color of the scrollbar track */
+}
+
+/* Custom Scrollbar Styles for Firefox */
+scrollbar-width: thin; /* Width of the scrollbar */
+scrollbar-color: rgba(255, 255, 255, 0.5) rgb(0,0,33); /* Color of the scrollbar thumb and track */
+
+
+  
